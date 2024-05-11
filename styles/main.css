@@ -1,0 +1,97 @@
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Poppins';
+  min-height: 100vh;
+  background-color: #060606;
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+
+#cards{
+  width: 70%;
+  padding-inline: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+#cards:hover > .card{
+  background: radial-gradient(
+    circle 700px at var(--mouse-x) var(--mouse-y),
+    hsl(var(--color)),
+    rgba(255,255,255,0.12) 40%
+  );
+}
+
+.card{
+  min-width: 200px;
+  height: 350px;
+  flex: 1 1 250px;
+  background: rgba(255, 255, 255, 0.12);
+  position: relative;
+  border-radius: 12px;
+}
+
+.card-content{
+  position: absolute;
+  inset: 1px;
+  background-color: #131315;
+  border-radius: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card:nth-child(1){
+  --color: 348 80% 50%
+}
+
+.card:nth-child(2){
+  --color: 0 0% 100%
+}
+
+.card:nth-child(3){
+  --color: 220 100% 35%
+}
+
+a{
+  all: unset;
+}
+
+.card-content > p{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.card-content > i{
+  font-size: 10rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.card-content > a{
+  width: 90%;
+  padding-block: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.card-content > a:hover{
+  background-color:  rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+}
